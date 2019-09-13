@@ -1,0 +1,46 @@
+﻿/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: Rose A
+   Date:   9-13-19
+   
+   Filename: lake_styles.css
+
+*/
+@charset "utf-8";
+@font-face{
+    font-family:champagne;
+    src:url(cac_champagne.woff) 
+}
+/*general stuff*/
+html{
+    background-color: rgb(200, 120, 100);
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover, a:active{
+    background-color: hsla(0, 0%, 70%, .8);
+}
+
+/*specific areas*/
+#rightcol{
+    background-color: rgb(210, 180, 240);
+    margin-left: 0px;
+    padding-left: 0px;
+}
+#leftcol{
+    background-color: rgb(130, 190, 210);
+    margin-right: 0px;
+    padding-right: 0px;
+}
+/* nav stuff*/
+header > nav{
+    background-color: rgb(80, 45, 115);
+    color:white;
+    text-decoration: none;
+}
