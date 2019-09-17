@@ -13,34 +13,102 @@
 @charset "utf-8";
 @font-face{
     font-family:champagne;
-    src:url(cac_champagne.woff) 
+    src:url(cac_champagne.woff) format('woff'),
+    url(cac_champagne.woof2) format('woff2'),
+    url(cac_champagne.ttf) format('ttf');
+}
+@font-face{
+    font-family: dobkin;
+    src:url(DobkinPlain.ttf) format('ttf'),
+    url(DobkinPlain.woof) format('woof'),
+    url(DobkinPlain.woof2) format('woof2');
+}
+body{
+    background-color: rgb(208, 189, 226);
 }
 /*general stuff*/
 html{
-    background-color: rgb(200, 120, 100);
+    background-color: rgb(207, 144, 128);
 }
 a{
     text-decoration: none;
     color:white;
 }
 a:hover, a:active{
-    background-color: hsla(0, 0%, 70%, .8);
+    background-color: hsla(0, 0%, 70%, .5);
 }
-
+blockquote{
+    padding-top: 8.4em;
+    padding-bottom: 8.4em;
+    vertical-align: bottom;
+}
 /*specific areas*/
 #rightcol{
-    background-color: rgb(210, 180, 240);
+    background-color: rgb(235, 206, 170);
+    margin-left: 0px;
+    padding-left: 0px;
+    text-align: center;
+}
+#rightcol ul{
+    list-style-type: none;
+    text-align: center;
+    text-decoration: underline;
     margin-left: 0px;
     padding-left: 0px;
 }
-#leftcol{
-    background-color: rgb(130, 190, 210);
-    margin-right: 0px;
-    padding-right: 0px;
+#rightcol a{
+    color:black;
 }
+#rightcol h2{
+    font-family: dobkin, cursive, serif;
+}
+#leftcol{
+    background-color: rgb(208, 189, 226);
+}
+#leftcol > p{
+    margin-left: 10px;
+}
+#leftcol h1{
+    font-family: champagne, cursive, serif;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    margin-top:5px;
+    text-align: center;
+    font-weight:normal;
+}
+section#leftcol > p:first-of-type:first-letter{
+    font-size: 2em;
+    vertical-align: baseline;
+}
+footer{
+    text-align: center;
+    background-color: rgb(80, 45, 115);
+    color:white;
+}
+#notes{
+    background-color: hsla(0, 0%, 70%, .5);
+}
+#notes ul{
+    list-style-type: circle;
+}
+#events{
+    background-color: hsla(0, 0%, 70%, .5);
+    padding-left: 5px;
+}
+#events h2{
+    font-weight: normal;
+    font-size:1.25em;
+
+}
+
 /* nav stuff*/
 header > nav{
     background-color: rgb(80, 45, 115);
     color:white;
     text-decoration: none;
+}
+
+/* trying the generating content*/
+blockquote::after{
+    content:"";
 }
